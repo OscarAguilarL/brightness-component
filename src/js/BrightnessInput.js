@@ -1,4 +1,5 @@
 import '../css/BrightnessInput.css';
+import '../css/Fonts.css';
 
 const wrapper = document.querySelector('.wrapper');
 const body = document.body;
@@ -7,6 +8,7 @@ let brightInput;
 const BrightnessInput = () => {
   const html = `
     <form>
+    <i class="icon-sun"></i>
       <input
         type="range"
         name="brightness"
@@ -27,7 +29,7 @@ const BrightnessInput = () => {
 };
 
 const events = () => {
-  brightInput.addEventListener('input', (event) => {
+  brightInput.addEventListener('input', () => {
     body.style.backgroundColor = `hsl(248, 22%, ${brightInput.value}%)`;
   });
 };

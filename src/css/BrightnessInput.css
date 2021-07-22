@@ -3,6 +3,11 @@ form {
   justify-content: center;
   align-items: center;
   block-size: 100%;
+  font-size: 3rem;
+}
+
+form i {
+  margin-inline-end: 1.5rem;
 }
 
 input[type='range'] {

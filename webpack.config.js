@@ -25,13 +25,21 @@ module.exports = {
         test: /styles.css$/,
         use: [MiniCssExtract.loader, 'css-loader'],
       },
+      // {
+      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/i,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {
+      //         name: '[name].[ext]',
+      //         outputPath: './fonts/',
+      //       },
+      //     },
+      //   ],
+      // },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-          },
-        ],
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        use: ['url-loader?limit=100000'],
       },
     ],
   },
