@@ -12,7 +12,7 @@ const BrightnessInput = () => {
         name="brightness"
         id="brightness"
         value="0"
-        min="1"
+        min="0"
         max="100"
         step="1"
       />
@@ -21,7 +21,7 @@ const BrightnessInput = () => {
 
   const div = document.createElement('div');
   div.innerHTML = html;
-  wrapper.appendChild(div);
+  wrapper.appendChild(div.firstElementChild);
 
   brightInput = document.querySelector('#brightness');
 };
